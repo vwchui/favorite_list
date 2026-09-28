@@ -29,11 +29,9 @@ export default function FavoritesPage() {
   }, [favorites]);
 
   function handleFavorite(id: number) {
-    const newFavorites = favorites.map((item) =>
-      item.id === id ? { ...item, favorite: !item.favorite } : item
-    );
-
-    setFavorites(newFavorites);
+    const item = favorites.find((i) => i.id === id);
+    if (item) item.favorite = !item.favorite;
+    setFavorites(favorites);
   }
 
   const favoritedOnly = favorites.filter((item) => item.favorite);

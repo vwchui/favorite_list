@@ -29,11 +29,13 @@ export default function FavoritesPage() {
   }, [favorites]);
 
   function handleFavorite(id: number) {
-    const newFavorites = favorites.map((item) =>
-      item.id === id ? { ...item, favorite: !item.favorite } : item
-    );
+    setTimeout(() => {
+      const newFavorites = favorites.map((item) =>
+        item.id === id ? { ...item, favorite: !item.favorite } : item
+      );
 
-    setFavorites(newFavorites);
+      setFavorites(newFavorites);
+    }, 0);
   }
 
   const favoritedOnly = favorites.filter((item) => item.favorite);

@@ -12,11 +12,9 @@ A standalone Vite + React + Tailwind scaffold pre-loaded with Living Design comp
 ## Getting Started
 
 ```bash
-# Point nvm at the Walmart Node.js mirror so installs work on-network
-export NVM_NODEJS_ORG_MIRROR="https://repository.walmart.com/content/repositories/nodejs/"
-nvm install          # install Node 22 (see .nvmrc) from the Walmart mirror
+nvm install          # install Node 22 (see .nvmrc) from nodejs.org
 nvm use              # switch to Node 22
-npm install          # install dependencies (registry + proxy are pinned in .npmrc)
+npm install          # install dependencies from the public npm registry
 npm run dev          # start dev server on http://localhost:3099
 ```
 
